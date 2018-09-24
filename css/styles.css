@@ -4,7 +4,7 @@
   padding: 0; }
 
 body {
-  background-color: lightgrey;
+  background-color: #CBD1C7;
   transition: 0.5s;
   max-width: 1200px;
   margin: auto;
@@ -18,7 +18,7 @@ header {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   text-align: right; }
   header img:not(#logo) {
     width: 30px;
@@ -31,9 +31,9 @@ main {
   text-align: center; }
   main img {
     width: 220px;
-    border-radius: 400px;
+    border-radius: 220px;
     border: 15px solid #F9F7EB;
-    box-shadow: 5px 5px 20px gray; }
+    box-shadow: 5px 5px 20px grey; }
   main .team {
     position: relative;
     display: block;
@@ -41,7 +41,7 @@ main {
   main .overlay > img:hover {
     opacity: 1;
     transition: 0.5s;
-    box-shadow: 10px 10px 20px gray; }
+    box-shadow: 10px 10px 20px grey; }
   main .overlay > img {
     position: absolute;
     transition: 5s;
