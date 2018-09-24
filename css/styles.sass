@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid:100,300,400')
+
+$width: 220px
+$img-border: 15px
+$white: #F9F7EB
+$blue: #5DC9D5
+$red: #F65B59
+$green: #9EC14D
+$yellow: #FBCC4A
+$text-shadow: 2px 2px 5px black
+
+*
+	margin: 0
+	padding: 0
+
+body
+	background-color: lightgrey
+	transition: 0.5s
+	max-width: 1200px
+	margin: auto
+	font-family: 'Londrina Solid'
+	font-weight: 300
+	border: 15px solid $white
+	border-radius: 30px
+	padding: 15px
+header
+	padding: 15px
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	text-align: right
+	img:not(#logo)
+		width: 30px
+		padding: 10px
+main
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	text-align: center
+	img 
+		width: $width
+		border-radius: 400px
+		border: $img-border solid $white
+		box-shadow: 5px 5px 20px gray
+	.team 
+		position: relative
+		display: block
+		width: $width + 2 * $img-border
+	.overlay > img:hover 
+		opacity: 1
+		transition: .5s
+		box-shadow: 10px 10px 20px gray
+	.overlay > img
+		position: absolute
+		transition: 5s
+		top: 0
+		left: 0
+		opacity: 0
+
+h1
+	font-weight: 300
+	font-size: 28px
+	
+.blue
+	color: $blue
+	text-shadow: $text-shadow
+.red
+	color: $red
+	text-shadow: $text-shadow
+.green
+	color: $green
+	text-shadow: $text-shadow
+.yellow
+	color: $yellow
+	text-shadow: $text-shadow
+.team_info 
+	width: $width
+	position: relative
+	background: $white
+	border-radius: 15px
+	margin: auto
+	margin-top: 30px
+	margin-bottom: 30px
+	padding: 15px
+
+.team_info:after 
+	bottom: 100%
+	left: 50%
+	border: solid transparent
+	content: ""
+	height: 0
+	width: 0
+	position: absolute
+	pointer-events: none
+	border-bottom-color: $white
+	border-width: 20px
+	margin-left: -20px
+	// http://www.cssarrowplease.com/ helped us
