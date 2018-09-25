@@ -14,8 +14,9 @@ function rotate(img, deg, duration) {
 }
 
 showTime();
-rotate("martina", 180);
-rotate("martina1", 180);
+rotate("martina", 180, ".1s");
+rotate("martina1", 180, ".1s");
 
 document.getElementById("martina").addEventListener("mouseover", function() {rotate("martina", 0, ".5s"); rotate("martina1", 0, ".5s")});
 document.getElementById("martina").addEventListener("mouseout", function(){rotate("martina", 180, "5s"); rotate("martina1", 180, "5s")});
+

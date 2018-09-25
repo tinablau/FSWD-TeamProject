@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Londrina+Solid:100,300,400");
+@keyframes body_on {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  background-color: #CBD1C7;
+  background: #CBD1C7 url("../img/bg.jpg") repeat;
   transition: 0.5s;
   max-width: 1200px;
   margin: auto;
@@ -12,7 +17,8 @@ body {
   font-weight: 300;
   border: 15px solid #F9F7EB;
   border-radius: 30px;
-  padding: 15px; }
+  padding: 15px;
+  animation: body_on 1s; }
 
 header {
   padding: 15px;
@@ -21,33 +27,41 @@ header {
   align-items: center;
   text-align: right; }
   header img:not(#logo) {
-    width: 30px;
-    padding: 10px; }
+    width: 40px;
+    padding: 10px;
+    border-radius: 40px; }
 
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center; }
-  main img {
-    width: 220px;
-    border-radius: 220px;
-    border: 15px solid #F9F7EB;
-    box-shadow: 5px 5px 20px grey; }
   main .team {
     position: relative;
     display: block;
     width: 250px; }
+    main .team > img {
+      width: 220px;
+      border-radius: 220px;
+      border: 15px solid #F9F7EB;
+      box-shadow: 5px 5px 20px grey; }
   main .overlay > img:hover {
     opacity: 1;
     transition: 0.5s;
     box-shadow: 10px 10px 20px grey; }
   main .overlay > img {
     position: absolute;
+    width: 220px;
+    border-radius: 220px;
+    border: 15px solid #F9F7EB;
+    box-shadow: 5px 5px 20px grey;
     transition: 5s;
     top: 0;
     left: 0;
     opacity: 0; }
+
+hr {
+  border-bottom: 1px dashed black; }
 
 h1 {
   font-weight: 300;
@@ -57,17 +71,41 @@ h1 {
   color: #5DC9D5;
   text-shadow: 2px 2px 5px black; }
 
+.blue_1 {
+  color: #5DC9D5; }
+  .blue_1 a {
+    text-decoration: none;
+    color: inherit; }
+
 .red {
   color: #F65B59;
   text-shadow: 2px 2px 5px black; }
+
+.red_1 {
+  color: #F65B59; }
+  .red_1 a {
+    text-decoration: none;
+    color: inherit; }
 
 .green {
   color: #9EC14D;
   text-shadow: 2px 2px 5px black; }
 
+.green_1 {
+  color: #9EC14D; }
+  .green_1 a {
+    text-decoration: none;
+    color: inherit; }
+
 .yellow {
   color: #FBCC4A;
   text-shadow: 2px 2px 5px black; }
+
+.yellow_1 {
+  color: #FBCC4A; }
+  .yellow_1 a {
+    text-decoration: none;
+    color: inherit; }
 
 .team_info {
   width: 220px;
@@ -78,12 +116,18 @@ h1 {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 15px; }
+  .team_info div div {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .team_info img {
+    width: 20px; }
 
 .team_info:after {
   bottom: 100%;
   left: 50%;
   border: solid transparent;
-  content: "";
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
