@@ -1,0 +1,55 @@
+.img{ 
+ border-radius: 200px;
+ height: 200px;
+ margin-top: 70px;
+
+}
+
+
+.name{
+	margin-left: 10px;
+	color:white;
+}
+
+
+.team_info {
+  width:800px;
+  height: 600px;
+  background: #F9F7EB;
+  border-radius: 15px;
+  margin-top: 200px;
+  margin-bottom: 30px;
+  padding: 15px;
+  margin-left:100px;
+  box-shadow: 2px 2px 2px 2px;
+  background-color:gray;
+  opacity: 0.7;
+
+
+   }
+
+ .aboutmy{
+  	display: flex;
+
+
+ 
+}
+.demo{
+	display:flex;
+	justify-content: space-between;
+	text-align: center;
+	color: white;
+	border-radius: 25px;
+	
+
+
+}
+
+body{
+	background-size: cover;
+	
+}  
+ 
+ .demo1{
+ 	border-radius: 250px;
+ }
