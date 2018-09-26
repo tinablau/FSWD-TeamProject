@@ -1,12 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina+Solid:100,300,400')
 @keyframes body_on
-	0%
+	from
 		opacity: 0
-	100%
+	to
 		opacity: 1
 
-$width: 220px
+@keyframes text_anim
+	0%
+		opacity: 0
+	10%
+		padding-left: 200px
+		opacity: 0
+	25%
+		padding-left: 0px
+		padding-right: 0px
+		opacity: 1
+	75%	
+		padding-left: 0px
+		padding-right: 0px
+		opacity: 1
+	90%
+		padding-right: 0px	
+		opacity: 1
+	100%
+		opacity: 0
+		padding-right: 200px
+
+$width: 200px
+$width_m: 100px
 $img-border: 15px
+$img-border_m: 5px
 $white: #F9F7EB
 $blue: #5DC9D5
 $red: #F65B59
@@ -24,9 +47,8 @@ $text-shadow: 2px 2px 5px black
 
 body
 	background: #CBD1C7 url("../img/bg.jpg") repeat
-	
-	transition: 0.5s
-	max-width: 1200px
+	transition: all 0.5s
+	max-width: 1650px
 	margin: auto
 	font-family: 'Londrina Solid'
 	font-weight: 300
@@ -51,6 +73,7 @@ main
 	justify-content: space-around
 	text-align: center
 	.team 
+		margin: 2px
 		position: relative
 		display: block
 		width: $width + 2 * $img-border
@@ -59,9 +82,10 @@ main
 			border-radius: $width
 			border: $img-border solid $white
 			box-shadow: 5px 5px 20px grey
+			transition: all .5s
 	.overlay > img:hover 
 		opacity: 1
-		transition: .5s
+		transition: all .5s
 		box-shadow: 10px 10px 20px grey
 	.overlay > img
 		position: absolute
@@ -75,6 +99,7 @@ main
 		opacity: 0
 hr
 	border-bottom: 1px dashed black
+	margin: 3px
 h1
 	font-weight: 300
 	font-size: 28px
@@ -116,10 +141,9 @@ h1
 		display: flex
 		align-items: center
 		justify-content: center
+		padding: 2px
 	img 
 		width: 20px
-
-
 .team_info:after 
 	bottom: 100%
 	left: 50%
@@ -133,3 +157,34 @@ h1
 	border-width: 20px
 	margin-left: -20px
 	// http://www.cssarrowplease.com/ helped us
+
+footer
+	padding: 15px
+	text-align: center
+	span
+		padding: 15px
+		opacity: 0
+		animation: text_anim 8s infinite
+@media screen and (max-width: 600px)
+
+	header
+		padding: 5px
+		display: block
+		text-align: center
+	main .team 
+		width: $width_m + 2 * $img-border_m
+		> img 
+			width: $width_m
+			border-radius: $width_m
+			border: $img-border_m solid $white
+	main .overlay > img
+		width: $width_m
+		border-radius: $width_m
+		border: $img-border_m solid $white
+	.team_info 
+		width: $width_m
+		font-size: 1.7vw
+		padding: 5px
+
+	footer
+		padding: 5px
