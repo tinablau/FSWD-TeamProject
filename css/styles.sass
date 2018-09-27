@@ -54,14 +54,14 @@ $text-shadow: 2px 2px 5px black
 body
 	background: #CBD1C7 url("../img/bg.jpg") repeat
 	transition: all 0.5s
-	max-width: 1650px
+	max-width: 1280px
 	margin: auto
 	font-family: 'Londrina Solid'
 	font-weight: 300
 	border: 15px solid $white
 	border-radius: 30px
 	padding: 15px
-	animation: body_on 1s
+	animation: body_on 2s
 
 header
 	padding: 15px
@@ -85,9 +85,9 @@ main
 		position: relative
 		display: block
 		width: $width + 2 * $img-border
-		> img 
+		a > img 
 			width: $width
-			border-radius: $width
+			border-radius: 100%
 			border: $img-border solid $white
 			box-shadow: 5px 5px 20px grey
 			transition: all .5s
@@ -105,6 +105,45 @@ main
 		top: 0
 		left: 0
 		opacity: 0
+
+.member
+	width: 400px
+	border-radius: 60px
+	border: 0px solid #F9F7EB
+	box-shadow: 15px 15px 30px grey
+
+.member_info 
+	width: 400px
+	position: relative
+	background: $white
+	border-radius: 15px
+	margin-bottom: 30px
+	padding: 15px
+	text-align: left
+	h1
+		text-align: center
+	p
+		font-size: 22px
+	ul
+		margin-left: 20px
+	a
+		text-decoration: none
+		color: black
+	img
+		width: 20px
+
+.member_info:after
+	top: 10%
+	right: 100%
+	border: solid transparent
+	content: ""
+	height: 0
+	width: 0
+	position: absolute
+	pointer-events: none
+	border-right-color: $white
+	border-width: 15px
+	margin-left: -15px
 hr
 	border: none
 	border-top: 1px dashed black
@@ -176,6 +215,10 @@ footer
 	padding: 15px
 	opacity: 0
 	animation: text_anim 8s infinite
+
+@import _szolt.sass
+
+
 @media screen and (max-width: 600px)
 
 	header
@@ -186,7 +229,7 @@ footer
 		text-align: center
 	main .team 
 		width: $width_m + 2 * $img-border_m
-		> img 
+		a > img 
 			width: $width_m
 			border-radius: $width_m
 			border: $img-border_m solid $white

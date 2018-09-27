@@ -37,14 +37,14 @@
 body {
   background: #CBD1C7 url("../img/bg.jpg") repeat;
   transition: all 0.5s;
-  max-width: 1650px;
+  max-width: 1280px;
   margin: auto;
   font-family: "Londrina Solid";
   font-weight: 300;
   border: 15px solid #F9F7EB;
   border-radius: 30px;
   padding: 15px;
-  animation: body_on 1s; }
+  animation: body_on 2s; }
 
 header {
   padding: 15px;
@@ -69,9 +69,9 @@ main {
     position: relative;
     display: block;
     width: 230px; }
-    main .team > img {
+    main .team a > img {
       width: 200px;
-      border-radius: 200px;
+      border-radius: 100%;
       border: 15px solid #F9F7EB;
       box-shadow: 5px 5px 20px grey;
       transition: all 0.5s; }
@@ -89,6 +89,45 @@ main {
     top: 0;
     left: 0;
     opacity: 0; }
+
+.member {
+  width: 400px;
+  border-radius: 60px;
+  border: 0px solid #F9F7EB;
+  box-shadow: 15px 15px 30px grey; }
+
+.member_info {
+  width: 400px;
+  position: relative;
+  background: #F9F7EB;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 15px;
+  text-align: left; }
+  .member_info h1 {
+    text-align: center; }
+  .member_info p {
+    font-size: 22px; }
+  .member_info ul {
+    margin-left: 20px; }
+  .member_info a {
+    text-decoration: none;
+    color: black; }
+  .member_info img {
+    width: 20px; }
+
+.member_info:after {
+  top: 10%;
+  right: 100%;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: #F9F7EB;
+  border-width: 15px;
+  margin-left: -15px; }
 
 hr {
   border: none;
@@ -179,6 +218,100 @@ footer {
   opacity: 0;
   animation: text_anim 8s infinite; }
 
+#jobtitle {
+  font-size: 50px; }
+
+.worklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.work {
+  margin: 20px;
+  padding: 20px;
+  max-width: 30%;
+  height: auto;
+  position: relative; }
+
+.work img {
+  width: 250px;
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  border: 15px solid #F9F7EB;
+  border-radius: 60px;
+  box-shadow: 5px 5px 20px grey; }
+
+.work:hover .listover {
+  opacity: 0.9;
+  background: #CBD1C7 url("../img/bg.jpg") repeat; }
+
+.listover {
+  position: absolute;
+  top: 12px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 1s ease; }
+
+.text {
+  color: black;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.workdesc {
+  padding: 0 30px;
+  margin-top: 50px; }
+
+.row1 {
+  display: flex;
+  text-align: justify;
+  margin: 15px 0;
+  padding: 15px 0; }
+
+.row2 {
+  display: flex;
+  text-align: justify;
+  margin: 15px 0;
+  padding: 15px 0; }
+
+.row2 img {
+  width: 220px;
+  margin-left: 30px;
+  float: right;
+  max-width: 100%;
+  height: auto;
+  border: 15px solid #F9F7EB;
+  border-radius: 60px;
+  box-shadow: 5px 5px 20px grey; }
+
+.row2 p {
+  font-size: 20px;
+  padding-right: 10px;
+  line-height: 2; }
+
+.row1 img {
+  width: 220px;
+  margin-right: 30px;
+  float: left;
+  max-width: 100%;
+  height: auto;
+  border: 15px solid #F9F7EB;
+  border-radius: 60px;
+  box-shadow: 5px 5px 20px grey; }
+
+.row1 p {
+  font-size: 20px;
+  padding-left: 10px;
+  line-height: 2; }
+
 @media screen and (max-width: 600px) {
   header {
     padding: 5px;
@@ -189,7 +322,7 @@ footer {
 
   main .team {
     width: 110px; }
-    main .team > img {
+    main .team a > img {
       width: 100px;
       border-radius: 100px;
       border: 5px solid #F9F7EB; }
