@@ -5,7 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<script src="js/all.js" charset="utf-8" async defer></script>
+	<script src="js/anim_text.json"></script>
+	<script src="js/all.js" async defer></script>
+	<script src="js/mario.js" async defer></script>
 </head>
 <body>
 	<header>
@@ -28,22 +30,43 @@
 	<main>
         <div id="container1">
             <img class="member" src="img/mario_yellow.jpg" alt="Mario">
-            <h1 class="green">
+            <h1 class="yellow">
             	Mario Weiss
             </h1>
         </div>
-        <div class="member_info member_transparent">
+        <div class="member_info">
 			<h1>Master of disaster</h1><br>
 			<p>
-				Hi there, I am a chemist and worked for a couple of years in the oilfield. <br>
-				Suddenly I realized that it is time for a change.<br>
-				As Chemistry and Computers were always my interest, I changed to the other side and I will be a future Fullstack Webdeveloper.<br>
-				People say about me, that I am a problem solver, so what`s your problem? Let me break it first  and then I will fix it for you ^^<br>
-				(That`s because I can repair almost everything, but I need to destroy it first...)<br>
+				Hi there, I am a chemist and I worked for a couple of years in the oilfield. <br>
+				Now is time for a change in my life.<br>
+				I always liked Chemistry and Computers,
+				this time I took the chance and I will be a future Fullstack Webdeveloper.<br>
+				People say about me, that I am a problem solver, so what`s your problem? <br>Maybe I can fix it for you ^^<br>
+				(Be warned! because most of the time I can only repair  things, I destroyed first...)<br>
 				My hobbies are spending time with my family, handball and playing computer games.
 			</p><br>
-			<p>mail: <a href="mobile@ing-weiss.com" title="">&nbsp;mobile@ing-weiss.com</a></p>
+			<p>mail: <a href="mailto:mobil@ing-weiss.com" title="">&nbsp;mobil@ing-weiss.com</a></p>
         </div>
+        <div id="bars">
+        	<div class="weeks">
+        		<img id="w1" src="img/week1.png" alt="week1">
+        		<img id="w2" src="img/week2.png" alt="week2">
+        		<img id="w3" src="img/week3.png" alt="week3">
+        		<img id="w4" src="img/week4.png" alt="week4">
+        	</div>
+			<div class="bar">
+				<div class="progress blue_bar" style="width:0%;">&nbsp;Knowledge</div>
+			</div>
+			<div class="bar">
+				<div class="progress red_bar" style="width:0%;">&nbsp;Motivation</div>
+			</div>
+			<div class="bar">
+				<div class="progress green_bar" style="width:0%;">&nbsp;Fun</div>
+			</div>
+			<div class="bar">
+				<div class="progress yellow_bar" style="width:0%;">&nbsp;Energy</div>
+			</div>
+		</div>
         
     </main>
 	<footer>
@@ -51,7 +74,6 @@
 		<p id="anim_text">
 		</p>
 		<hr>
-	</footer>
-	
+	</footer>	
 </body>
 </html>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina+Solid:100,300,400')
+
 @keyframes body_on
 	from
 		opacity: 0
@@ -31,6 +32,30 @@
 		opacity: 0
 		filter: alpha(opacity=0)
 		padding-right: 200px
+
+@keyframes shake 
+	0%
+		transform: translate(1px, 1px) rotate(0deg)
+	10%
+		transform: translate(-1px, -2px) rotate(-1deg)
+	20%
+		transform: translate(-3px, 0px) rotate(1deg)
+	30%
+		transform: translate(3px, 2px) rotate(0deg)
+	40%
+		transform: translate(1px, -1px) rotate(1deg)
+	50%
+		transform: translate(-1px, 2px) rotate(-1deg)
+	60%
+		transform: translate(-3px, 1px) rotate(0deg)
+	70%
+		transform: translate(3px, 1px) rotate(-1deg)
+	80%
+		transform: translate(-1px, -1px) rotate(1deg)
+	90%
+		transform: translate(1px, 2px) rotate(0deg)
+	100%
+		transform: translate(1px, -2px) rotate(-1deg)
 
 $width: 200px
 $width_m: 100px
@@ -75,6 +100,8 @@ header
 		border-radius: 40px
 	#logo
 		width: 350px
+		&:hover
+			animation: shake .5s infinite
 main
 	display: flex
 	flex-wrap: wrap
@@ -118,6 +145,7 @@ main
 	background: $white
 	border-radius: 15px
 	margin-bottom: 30px
+	margin-left: 15px
 	padding: 15px
 	text-align: left
 	h1
@@ -129,8 +157,6 @@ main
 	a
 		text-decoration: none
 		color: black
-	img
-		width: 20px
 
 .member_info:after
 	top: 10%
@@ -211,10 +237,52 @@ h1
 footer
 	padding: 15px
 	text-align: center
+	h2
+		text-transform: uppercase
+		font-size: 24px !important
+		font-weight: 300 !important
 #anim_text
 	padding: 15px
 	opacity: 0
 	animation: text_anim 8s infinite
+
+.weeks
+	img
+		width: 20%
+		filter: grayscale(90%)
+		&:hover
+			filter: grayscale(00%) !important
+			transition: 0.5s
+#bars
+	width: 80%
+	margin-top: 20px
+
+.bar
+	margin: 4px
+	width: 100%
+	height: 30px
+	border: 1px solid #ddd
+	border-radius: 5px
+	overflow: hidden
+	background: $white
+
+.progress 
+	height: 22px
+	border-radius: 5px
+	font-size: 16px
+	padding: 4px
+	color: black
+	transition: 2s
+	text-align: left
+
+.blue_bar
+	background: $blue
+.red_bar
+	background: $red
+.green_bar
+	background: $green
+.yellow_bar
+	background: $yellow
 
 @import _szolt.sass
 

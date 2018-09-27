@@ -10,19 +10,15 @@ html:not(header > div) {
   box-sizing: inherit;
 }
 body{
-  @include filter-gradient(#53455b, #201e22, horizontal);
-  @include background-image(radial-gradient(circle at top,  rgba(83,69,91,1) 0,rgba(32,30,34,1) 70%));
   color: black;
-  font-family: 'Londrina solid', sans-serif;
-  font-size: 100%;
   min-height: 100%;
   line-height: 1.5;
   padding: 2.5em 0;
 }
+
 .container {
   margin: 0 auto;
-  width: 90%;
-  max-width: 1200px;
+  max-width: 1250px;
   display:  flex;
   flex-wrap: wrap;
 }
@@ -108,31 +104,30 @@ body{
     @include background-image(linear-gradient(left,  rgba(238,122,54,1) 0%,rgba(235,73,93,1) 100%));    
   }
 }
-h1, h2, h3, p, ul {
+.grid-1-5 h1, h2, h3, p, ul {
   margin: 0
 }
 
-h1 {
+.grid-1-5 h1 {
   text-align:  center;
-
 }
-h2 {
+.grid-1-5 h2 {
   font-size: 1em;
   font-weight: 400;
   margin: 0 0 0.5em;
 }
-h3 {
+.grid-1-5 h3 {
   font-size: 1.5em;
   letter-spacing: 0.0625em;
   margin: 0 0 0.3333333333333333em;
 }
-p {
+/*p {
   font-size: 0.875em;  
 }
 p, ul {
   margin:0 0 1.5em
-}
-ul {
+} */
+.grid-1-5 ul {
   color: black;
   font-size: 0.75em;
   list-style-type: none;
@@ -152,7 +147,7 @@ ul {
   position: absolute;
   bottom: 1.25em;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -85px;
   text-decoration: none;
   width: 120px;
 }
