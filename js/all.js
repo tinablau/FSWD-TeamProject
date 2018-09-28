@@ -13,7 +13,6 @@ function textrotate() {
     var i = Math.floor(Math.random()*anim_text.length);
     text.innerHTML = anim_text[i];
     setTimeout(textrotate, 8000);
-    console.log(i);
 }
 
 textrotate();

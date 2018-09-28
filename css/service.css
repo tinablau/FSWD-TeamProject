@@ -21,6 +21,8 @@ body{
   max-width: 1250px;
   display:  flex;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 .group:after {
   content: "";
