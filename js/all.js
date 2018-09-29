@@ -8,11 +8,15 @@ function showTime() {
 }
 
 var text = document.getElementById("anim_text")
+text.addEventListener("animationiteration",textrotate);
 
 function textrotate() {
     var i = Math.floor(Math.random()*anim_text.length);
     text.innerHTML = anim_text[i];
-    setTimeout(textrotate, 8000);
+  /*  setTimeout(textrotate, 8000); 
+	bad was to do,
+	better to use EventListener on animationiteration to change the text
+  */
 }
 
 textrotate();
