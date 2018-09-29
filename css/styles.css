@@ -93,6 +93,8 @@ header {
     transition: 0.5s; }
     header .flag:hover {
       filter: grayscale(0%); }
+  header .nowrap {
+    white-space: nowrap; }
 
 main {
   display: flex;
